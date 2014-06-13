@@ -1,0 +1,20 @@
+- if current_user.blank?
+  .col-lg-12.jumbotron
+    .omb_login
+      %heading.center
+        %h1 Welcome!
+        %h3 Login to Start!
+      %br  
+      .row.omb_row-sm-offset-3.omb_socialButtons
+        .col-xs-4.col-sm-2
+          %a.btn.btn-lg.btn-block.omb_btn-facebook{:href => '/auth/facebook', id: 'sign_in' }
+            %i.fa.fa-facebook
+            %span.hidden-xs &nbsp;&nbsp;Facebook
+        .col-xs-4.col-sm-2
+          %a.btn.btn-lg.btn-block.omb_btn-twitter{:href => '/auth/twitter', id: 'sign_in'}
+            %i.fa.fa-twitter
+            %span.hidden-xs &nbsp;Twitter
+        .col-xs-4.col-sm-2
+          %a.btn.btn-lg.btn-block.omb_btn-google{:href => '/auth/google_oauth2', id: 'sign_in' }
+            %i.fa.fa-google-plus
+            %span.hidden-xs &nbsp;Google+        
